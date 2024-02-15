@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+bool isPalindrome(const string& str) {
+    string reversedStr = str;
+    reverse(reversedStr.begin(), reversedStr.end()); // Reverse the string
+
+    return str == reversedStr; // Compare original string with reversed string
+}
+
+int main() {
+    string inputString;
+
+    cout << "Enter a string: ";
+    getline(cin, inputString);
+
+    if (isPalindrome(inputString)) {
+        cout << "The string \"" << inputString << "\" is a palindrome." << endl;
+    } else {
+        cout << "The string \"" << inputString << "\" is not a palindrome." << endl;
+    }
+    return 0;
+}
